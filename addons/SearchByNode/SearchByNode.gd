@@ -8,14 +8,14 @@ _active_only = true default, if sets to true than will return only visible objec
 mainSubViewPort = null default, if you want to get objects only inside a subviewport (acting like current scene)
 """
 ## Finds node by a given type and returns it.
-func findNodeByType(_type : Object,_active_only : bool = true,mainSubViewPort : SubViewport = null) -> Object:
+func findNodeByType(_type : Object,_active_only : bool = true, mainScene : Object = null) -> Object:
 	if not _check_cast_class(_type):
 		push_error("Don't send an instantiated or null object ")
 		return null
 	else:
 		var main_scene_node : Object = get_tree().current_scene
-		if mainSubViewPort:
-			main_scene_node = mainSubViewPort
+		if mainScene:
+			main_scene_node = mainScene
 		if main_scene_node:
 			listOfAllNodesInParent.clear()
 			_findByType(main_scene_node,_type)
@@ -36,15 +36,15 @@ _active_only = true default, if sets to true than will return only visible objec
 mainSubViewPort = null default, if you want to get objects only inside a subviewport (acting like current scene)
 """
 ## Finds all nodes by a given type and returns it.
-func findNodesByType(_type : RefCounted , _active_only : bool = true,mainSubViewPort : SubViewport = null) -> Array[Object]:
+func findNodesByType(_type : RefCounted , _active_only : bool = true,mainScene : Object = null) -> Array[Object]:
 	var listOfAllNodes: Array[Object] = []
 	if not _check_cast_class(_type):
 		push_error("Don't send an instantiated or null object ")
 		return listOfAllNodes
 	else:
 		var main_scene_node : Object = get_tree().current_scene
-		if mainSubViewPort:
-			main_scene_node = mainSubViewPort
+		if mainScene:
+			main_scene_node = mainScene
 		if main_scene_node:
 			listOfAllNodesInParent.clear()
 			_findByType(main_scene_node,_type)
