@@ -92,4 +92,4 @@ Feel free to experiment and adapt the examples to fit your specific needs.
 
 ### License
 
-This asset is provided under the [MIT License](LICENSE.md).
+This asset is provided under the [MIT License](LICENSE).
