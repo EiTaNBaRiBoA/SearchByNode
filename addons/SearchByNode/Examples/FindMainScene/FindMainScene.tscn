@@ -22,14 +22,14 @@ script = ExtResource("1_53184")
 
 [node name="subObj3" type="Node2D" parent="SubViewport/SubMainScene"]
 
-[node name="SubSubMainScene" type="Node3D" parent="SubViewport/SubMainScene"]
+[node name="subObj4" type="Node3D" parent="SubViewport/SubMainScene"]
 
-[node name="subObj1" type="Node2D" parent="SubViewport/SubMainScene/SubSubMainScene"]
+[node name="subsubObj1" type="Node2D" parent="SubViewport/SubMainScene/subObj4"]
 
-[node name="subObj2" type="Node2D" parent="SubViewport/SubMainScene/SubSubMainScene"]
+[node name="subsubObj2" type="Node2D" parent="SubViewport/SubMainScene/subObj4"]
 script = ExtResource("1_53184")
 
-[node name="subObj3" type="Node2D" parent="SubViewport/SubMainScene/SubSubMainScene"]
+[node name="subsubObj3" type="Node2D" parent="SubViewport/SubMainScene/subObj4"]
 
 [node name="SubMainScene2" type="Node2D" parent="SubViewport"]
 
